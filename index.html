@@ -12,6 +12,27 @@
   <meta property="og:type" content="website" />
   <meta property="og:image" content="hero.jpg" />
   <meta property="og:locale" content="es_MX" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "SADE Soluciones Inmobiliarias",
+    "alternateName": "SADE Inmobiliaria",
+    "url": "https://ciencias75.github.io/sade-recepcion/",
+    "telephone": "+523330776110",
+    "email": "contacto@sadesi.com.mx",
+    "image": "https://ciencias75.github.io/sade-recepcion/hero.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Guadalajara",
+      "addressRegion": "Jalisco",
+      "addressCountry": "MX"
+    },
+    "areaServed": ["Guadalajara", "Zapopan", "Zona Metropolitana de Guadalajara", "Jalisco"],
+    "sameAs": ["https://sadesi.com.mx/"],
+    "description": "SADE Soluciones Inmobiliarias (SADE Inmobiliaria): venta, renta y preventa de casas, departamentos y terrenos en Guadalajara y Zapopan, Jalisco, Mexico."
+  }
+  </script>
   <link rel="icon" href="logo-s.jpg" type="image/jpeg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -261,16 +282,16 @@
       gap: 0.85rem 1.25rem;
     }
     .seo-note {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border: 0;
+      max-width: 720px;
+      margin: 2.2rem auto 0;
+      text-align: center;
+      font-size: 0.84rem;
+      line-height: 1.55;
+      color: rgba(255, 255, 255, 0.82);
     }
+    .seo-note p { margin-bottom: 0.4rem; }
+    .seo-note a { color: var(--primary-100); font-weight: 600; }
+    .seo-note a:hover { color: var(--white); }
     @media (min-width: 768px) {
       .topbar { padding: 1.4rem 2rem; }
       .main { padding: 2.5rem 2rem 4rem; }
@@ -331,9 +352,12 @@
     </footer>
     <div class="seo-note">
       <p>
-        SADE Soluciones Inmobiliarias (también conocida como SADE Inmobiliaria) es una agencia de bienes raíces
-        con sede en Guadalajara y Zapopan, Jalisco, México. Ofrece servicios de venta, renta y preventa de
-        casas, departamentos, terrenos y oficinas. Sitio principal: https://sadesi.com.mx/
+        SADE Soluciones Inmobiliarias, también conocida como SADE Inmobiliaria, es una agencia de bienes
+        raíces con sede en Guadalajara y Zapopan, Jalisco, México. Con más de 14 años de experiencia,
+        ofrece venta, renta y preventa de casas, departamentos, terrenos, oficinas y locales comerciales.
+      </p>
+      <p>
+        Sitio principal: <a href="https://sadesi.com.mx/">sadesi.com.mx</a>
       </p>
     </div>
   </div>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ciencias75.github.io/sade-recepcion/sitemap.xml
