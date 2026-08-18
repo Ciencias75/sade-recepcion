@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SADE Soluciones Inmobiliarias | Casas y departamentos en Guadalajara y Zapopan</title>
+  <meta name="description" content="SADE Soluciones Inmobiliarias: venta, renta y preventa de casas, departamentos y terrenos en Guadalajara y Zapopan. Más de 14 años de experiencia." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://ciencias75.github.io/sade-recepcion/" />
+  <meta property="og:title" content="SADE Soluciones Inmobiliarias | Guadalajara y Zapopan" />
+  <meta property="og:description" content="Siempre tu mejor opción. Venta, renta y preventa de propiedades en Guadalajara y Zapopan." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="hero.jpg" />
+  <meta property="og:locale" content="es_MX" />
+  <link rel="icon" href="logo-s.jpg" type="image/jpeg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800&family=Roboto+Slab:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #7FC6BE;
+      --primary-hover: #75b7af;
+      --primary-pressed: #6aa59e;
+      --primary-50: #f3faf8;
+      --primary-100: #d8efeb;
+      --primary-900: #0f2324;
+      --muted: #767B8B;
+      --white: #ffffff;
+      --shadow: 0 18px 50px rgba(15, 35, 36, 0.28);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      min-height: 100%;
+      font-family: "Mulish", system-ui, -apple-system, sans-serif;
+      color: var(--primary-900);
+      background: #0f2324;
+    }
+    a { color: inherit; text-decoration: none; }
+    .page {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .bg {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(105deg, rgba(15, 35, 36, 0.72) 0%, rgba(15, 35, 36, 0.45) 48%, rgba(15, 35, 36, 0.55) 100%),
+        url("hero.jpg") center / cover no-repeat;
+      z-index: 0;
+    }
+    .bg::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 70% 40%, transparent 0%, rgba(15, 35, 36, 0.35) 70%);
+    }
+    .topbar {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.1rem 1.25rem;
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    .logo-card {
+      background: var(--white);
+      padding: 0.55rem 0.85rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+      display: flex;
+      align-items: center;
+      min-height: 58px;
+    }
+    .logo-card img {
+      display: block;
+      height: 42px;
+      width: auto;
+      max-width: 180px;
+      object-fit: contain;
+    }
+    .menu-dot {
+      width: 48px;
+      height: 48px;
+      background: #111;
+      color: var(--white);
+      display: grid;
+      place-items: center;
+    }
+    .menu-dot span {
+      display: block;
+      width: 18px;
+      height: 2px;
+      background: currentColor;
+      position: relative;
+    }
+    .menu-dot span::before,
+    .menu-dot span::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 18px;
+      height: 2px;
+      background: currentColor;
+    }
+    .menu-dot span::before { top: -6px; }
+    .menu-dot span::after { top: 6px; }
+    .main {
+      position: relative;
+      z-index: 2;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 2rem 1.25rem 3rem;
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--primary-100);
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 28px;
+      height: 2px;
+      background: var(--primary);
+    }
+    h1 {
+      font-family: "Roboto Slab", Georgia, serif;
+      font-weight: 700;
+      font-size: clamp(2.4rem, 7vw, 4.6rem);
+      line-height: 1.08;
+      color: var(--white);
+      max-width: 14ch;
+      text-shadow: 0 2px 24px rgba(0, 0, 0, 0.35);
+      margin-bottom: 1rem;
+    }
+    .lead {
+      color: rgba(255, 255, 255, 0.92);
+      font-size: clamp(1rem, 2.2vw, 1.2rem);
+      line-height: 1.55;
+      max-width: 38rem;
+      margin-bottom: 2rem;
+      font-weight: 500;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.97);
+      box-shadow: var(--shadow);
+      max-width: 560px;
+      width: 100%;
+      overflow: hidden;
+    }
+    .tabs {
+      display: flex;
+      background: var(--primary-100);
+    }
+    .tabs span {
+      flex: 1;
+      text-align: center;
+      padding: 0.9rem 0.5rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--primary-900);
+    }
+    .tabs span.active {
+      background: var(--primary-50);
+      color: var(--primary-900);
+    }
+    .card-body {
+      padding: 1.4rem 1.35rem 1.5rem;
+      background: var(--white);
+    }
+    .card-body p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 1.15rem;
+    }
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.65rem;
+      width: 100%;
+      background: var(--primary);
+      color: var(--white);
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: 0.01em;
+      padding: 1rem 1.25rem;
+      border: 0;
+      transition: background 0.18s ease, transform 0.18s ease;
+    }
+    .cta:hover {
+      background: var(--primary-hover);
+      transform: translateY(-1px);
+    }
+    .cta:active {
+      background: var(--primary-pressed);
+      transform: none;
+    }
+    .cta svg {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+    }
+    .secondary-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.25rem;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    .secondary-links a {
+      color: var(--primary-900);
+      border-bottom: 1px solid transparent;
+    }
+    .secondary-links a:hover {
+      border-bottom-color: var(--primary);
+      color: var(--primary-pressed);
+    }
+    .footer {
+      position: relative;
+      z-index: 2;
+      margin-top: auto;
+      padding: 1rem 1.25rem 1.4rem;
+      max-width: 1200px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.5rem;
+      align-items: center;
+      justify-content: space-between;
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 0.88rem;
+    }
+    .footer a {
+      color: var(--primary-100);
+      font-weight: 600;
+    }
+    .footer a:hover { color: var(--white); }
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem 1.25rem;
+    }
+    .seo-note {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    @media (min-width: 768px) {
+      .topbar { padding: 1.4rem 2rem; }
+      .main { padding: 2.5rem 2rem 4rem; }
+      .card-body { padding: 1.6rem 1.6rem 1.7rem; }
+      .footer { padding: 1.2rem 2rem 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="bg" aria-hidden="true"></div>
+    <header class="topbar">
+      <a class="logo-card" href="https://sadesi.com.mx/" title="SADE Soluciones Inmobiliarias">
+        <img src="logo-s.jpg" alt="SADE Soluciones Inmobiliarias" width="180" height="42" />
+      </a>
+      <div class="menu-dot" aria-hidden="true"><span></span></div>
+    </header>
+    <main class="main">
+      <p class="eyebrow">SADE · Guadalajara y Zapopan</p>
+      <h1>Siempre tu mejor opción</h1>
+      <p class="lead">
+        SADE Soluciones Inmobiliarias: venta, renta y preventa de casas, departamentos y terrenos.
+        Más de 14 años acompañando a familias y empresas en Jalisco.
+      </p>
+      <section class="card" aria-label="Entrar al sitio principal">
+        <div class="tabs" aria-hidden="true">
+          <span class="active">Venta</span>
+          <span>Renta</span>
+          <span>Preventa</span>
+        </div>
+        <div class="card-body">
+          <p>
+            Explora el inventario completo de propiedades, agenda visitas y habla con un asesor.
+          </p>
+          <a class="cta" href="https://sadesi.com.mx/" title="Entrar al sitio de SADE Soluciones Inmobiliarias">
+            Entrar al sitio
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14M13 5l7 7-7 7" />
+            </svg>
+          </a>
+          <div class="secondary-links">
+            <a href="https://sadesi.com.mx/propiedades">Ver propiedades</a>
+            <a href="tel:+523330776110">Llamar</a>
+            <a href="https://wa.me/523330776110" rel="noopener noreferrer" target="_blank">WhatsApp</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="contact">
+        <a href="tel:+523330776110">+52 (333) 077-6110</a>
+        <a href="mailto:contacto@sadesi.com.mx">contacto@sadesi.com.mx</a>
+      </div>
+      <p>
+        Sitio oficial:
+        <a href="https://sadesi.com.mx/">sadesi.com.mx</a>
+      </p>
+    </footer>
+    <div class="seo-note">
+      <p>
+        SADE Soluciones Inmobiliarias (también conocida como SADE Inmobiliaria) es una agencia de bienes raíces
+        con sede en Guadalajara y Zapopan, Jalisco, México. Ofrece servicios de venta, renta y preventa de
+        casas, departamentos, terrenos y oficinas. Sitio principal: https://sadesi.com.mx/
+      </p>
+    </div>
+  </div>
+</body>
+</html>
